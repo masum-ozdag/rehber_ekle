@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 d-flex mt-2 justify-content-center">
+                <button type="button" class="btn col-12 btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                    data-bs-whatever="@getbootstrap">Rehbere
+                    Ekle</button>
+            </div>
+            <div class="col-12">
+
+                <nav class="navbar navbar-light bg-light">
+                    <div class="container-fluid">
+                        <form class="d-flex">
+                            <input id="search-name" class="form-control me-2" type="search" placeholder="Kişi ara"
+                                aria-label="Search">
+                            <button class="btn btn-outline-dark" type="submit" onclick="search(event)">Ara</button>
+                        </form>
+                    </div>
+                </nav>
+
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">NO</th>
+                            <th scope="col">AD</th>
+                            <th scope="col">SOYAD</th>
+                            <th scope="col">TEL</th>
+                            <th scope="col">GÜNCELLE/SİL</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-kisiler">
+                        <tr>
+                            <td colspan="5">Kayıt Bulunamadı !!!</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--MODAL BAŞLANGIÇ-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Yeni Kişi</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">AD</label>
+                            <input type="text" class="form-control" id="input-name">
+                        </div>
+
+                    </form>
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">SOYAD</label>
+                            <input type="text" class="form-control" id="input-surname">
+                        </div>
+
+                    </form>
+                    <form>
+                        <div class="mb-3">
+                            <label for="recipient-name" class="col-form-label">TEL</label>
+                            <input type="number" class="form-control" id="input-phone">
+                        </div>
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+                    <button type="button" class="btn btn-primary" onclick="save(event)" id="islemler">Kaydet</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL BİTİŞ-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
